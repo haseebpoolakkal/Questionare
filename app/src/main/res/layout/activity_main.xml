@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/home_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/app_name"
+        android:textColor="@color/text_color"
+        android:textSize="36dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/home_app_name"
+            android:layout_marginBottom="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/home_top_bar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/color_primary_bg"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/child_category"
+                        android:layout_alignParentRight="true"
+                        tools:text="Name"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/child_name"
+                        tools:text="Name"
+                        android:textSize="24dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_top_row_1"
+                        android:padding="10dp"
+                        android:layout_below="@id/child_name">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/test_completed_text"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/test_completed"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="sans-serif"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/test_completed_value"
+                            android:layout_toRightOf="@id/test_completed_text"
+                            android:layout_marginLeft="20dp"
+                            tools:text="100"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="sans-serif"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_top_row_2"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/home_top_row_1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/test_pending_text"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/test_pending"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="sans-serif"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/test_pending_value"
+                            android:layout_toRightOf="@id/test_pending_text"
+                            android:layout_marginLeft="20dp"
+                            tools:text="100"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="sans-serif"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_test_button"
+                    android:layout_width="170dp"
+                    android:layout_height="270dp"
+                    android:layout_below="@id/home_top_bar_container"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/color_primary_bg"
+                        android:alpha="0.5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/new_tests"
+                        android:textColor="@color/text_color"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_result_button"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_below="@id/home_top_bar_container"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/color_primary_bg"
+                        android:alpha="0.5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/results"
+                        android:textColor="@color/text_color"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_logout_button"
+                    android:layout_width="170dp"
+                    android:layout_height="270dp"
+                    android:layout_below="@id/home_test_button"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/color_primary_bg"
+                        android:alpha="0.5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/logout"
+                        android:textColor="@color/text_color"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_about_button"
+                    android:layout_width="170dp"
+                    android:layout_height="270dp"
+                    android:layout_below="@id/home_result_button"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/color_primary_bg"
+                        android:alpha="0.5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/about"
+                        android:textColor="@color/text_color"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_privacy_button"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_below="@id/home_logout_button"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/color_primary_bg"
+                        android:alpha="0.5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/privacy"
+                        android:textColor="@color/text_color"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_exit_button"
+                    android:layout_width="170dp"
+                    android:layout_height="270dp"
+                    android:layout_below="@id/home_about_button"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/color_primary_bg"
+                        android:alpha="0.5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/exit"
+                        android:textColor="@color/text_color"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+</RelativeLayout>

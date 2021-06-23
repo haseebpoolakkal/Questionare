@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/login_username"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_bg"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:fontFamily="sans-serif"
+            android:maxLength="30"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint_color" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/login_username"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/input_bg"
+            android:hint="******"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint_color" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_password"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/login"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:indeterminateTint="@color/colorPrimary" />
+
+</RelativeLayout>

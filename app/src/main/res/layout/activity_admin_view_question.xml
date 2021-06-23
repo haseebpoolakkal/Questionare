@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AdminViewQuestion">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin_view_question_top_container">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/admin_view_question_test_name"
+            tools:text="Test 1"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:id="@+id/admin_view_question_mark_text"
+            android:layout_below="@id/admin_view_question_test_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/total_mark"
+            android:textColor="@color/text_color"
+            android:textSize="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/admin_view_question_mark"
+            android:layout_below="@id/admin_view_question_test_name"
+            android:text="100"
+            android:layout_toRightOf="@id/admin_view_question_mark_text"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/admin_view_question_recycler_layout"
+        android:layout_below="@id/admin_view_question_top_container"
+        android:layout_margin="16dp"
+        android:paddingBottom="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/admin_view_question_recycler"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/admin_view_question_empty_anim"
+            android:layout_centerInParent="true"
+            app:lottie_rawRes="@raw/empty_box"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/admin_view_question_progress"
+            android:layout_centerInParent="true"
+            app:lottie_rawRes="@raw/spinning_circle"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

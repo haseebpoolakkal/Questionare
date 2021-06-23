@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/about_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="@string/about"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/about_logo_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_heading"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:fontFamily="sans-serif"
+            android:id="@+id/about_app_name"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:id="@+id/version_code_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_app_name"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/version_code_text"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif"
+                android:layout_height="wrap_content"
+                android:text="Version : "
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/version_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:layout_toRightOf="@id/version_code_text"
+                android:textColor="@color/white"
+                tools:text="1.2.0" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/about_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_logo_layout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/about_t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:text="Developed By:"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/about_t2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/about_t1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/general_logo_white"/>
+
+        <TextView
+            android:id="@+id/about_t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_t2"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="5dp"
+            android:text="AzeTech"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/about_t4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_t3"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="5dp"
+            android:text="azetech2016@gmail.com"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AdminAddQuestion">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/popup_heading"
+                android:text="@string/add_question"
+                android:textSize="36dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/question_number_count_text"
+                android:text="@string/number_of_questions_added"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:fontFamily="sans-serif"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/popup_heading"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/question_number_count"
+                android:layout_toRightOf="@id/question_number_count_text"
+                android:text="0"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"
+                android:textSize="14dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/popup_heading"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/popup_question_layout"
+                android:background="@drawable/add_question_bg"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/popup_heading"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/popup_question_text"
+                    android:text="@string/question"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/popup_question_input"
+                    android:layout_below="@id/popup_question_text"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="18dp"
+                    android:background="@drawable/input_bg"
+                    android:padding="10dp"/>
+
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/popup_mark_input"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:inputType="number"
+                android:fontFamily="sans-serif"
+                android:layout_below="@id/popup_question_layout"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/mark"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/popup_time_input"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif"
+                android:inputType="number"
+                android:layout_below="@id/popup_mark_input"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/answering_time"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/popup_answer_input"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif"
+                android:layout_below="@id/popup_time_input"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/answer"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/popup_option_1_input"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:layout_below="@id/popup_answer_input"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/input_bg"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/option_1"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/popup_option_2_input"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:layout_below="@id/popup_option_1_input"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/input_bg"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/option_2"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/popup_option_3_input"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:layout_below="@id/popup_option_2_input"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/input_bg"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/option_3"
+                android:padding="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/popup_add_question_button"
+                android:textColor="@color/white"
+                android:text="@string/add_question"
+                android:background="@drawable/button_bg"
+                android:fontFamily="sans-serif"
+                android:layout_below="@id/popup_option_3_input"
+                android:layout_margin="30dp"/>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/popup_progress"
+                android:layout_below="@id/popup_add_question_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:indeterminateTint="@color/colorPrimary"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

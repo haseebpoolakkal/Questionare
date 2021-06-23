@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AdminAddTest">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_question_heading"
+        android:text="@string/add_test"
+        android:textSize="36dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_question_heading">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/add_test_name"
+                android:background="@drawable/input_bg"
+                android:hint="@string/test_name"
+                android:fontFamily="sans-serif"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/add_test_category"
+                android:layout_below="@id/add_test_name"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:entries="@array/category"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_test_add_question_button"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"
+                android:text="@string/add_question"
+                android:background="@drawable/button_bg"
+                android:layout_below="@id/add_test_category"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

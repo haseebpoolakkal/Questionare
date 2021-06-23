@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AdminEditChild">
+
+    <TextView
+        android:id="@+id/edit_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/edit_child"
+        android:textColor="@color/text_color"
+        android:textSize="36dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/edit_child_name"
+            android:layout_marginTop="22dp"
+            android:hint="@string/enter_child_name"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint_color"
+            android:background="@drawable/input_bg"
+            android:inputType="text"
+            android:maxLength="30"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/edit_parent_name"
+            android:layout_below="@id/edit_child_name"
+            android:layout_marginTop="22dp"
+            android:hint="@string/enter_parent_name"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:textColorHint="@color/text_hint_color"
+            android:background="@drawable/input_bg"
+            android:inputType="text"
+            android:maxLength="30"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_category_selector_container"
+            android:layout_marginTop="22dp"
+            android:layout_below="@id/edit_parent_name"
+            android:background="@drawable/input_bg"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_category_selector_text"
+                android:text="@string/select_category"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:textSize="12dp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/edit_category_selector"
+                android:layout_below="@id/edit_category_selector_text"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:entries="@array/category"/>
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_child_button"
+            android:text="@string/update"
+            android:background="@drawable/button_bg"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:layout_below="@id/edit_category_selector_container"
+            android:layout_marginTop="60dp"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/edit_child_progress"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:indeterminateTint="@color/colorPrimary"/>
+
+
+</RelativeLayout>

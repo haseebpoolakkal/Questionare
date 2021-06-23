@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    tools:context=".QuestionFragment">
+
+<!--    Beginning Text Starts here-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_warning_container"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/warning_text_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:textSize="36dp"
+            android:text="Are You Ready!!" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/warning_content_container"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/warning_text_0"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/warning_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:text="Read questions carefully." />
+
+            <TextView
+                android:id="@+id/warning_text_2"
+                android:layout_below="@id/warning_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:text="Select only one option and press next button." />
+
+            <TextView
+                android:id="@+id/warning_text_3"
+                android:layout_below="@id/warning_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:text="All question multiple-choice." />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/warning_content_container"
+            android:layout_margin="50dp"
+            android:indeterminateTint="@color/white"/>
+    </RelativeLayout>
+<!--    Question Container Starts Here-->
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:visibility="gone"
+       android:id="@+id/question_question_layout_container">
+
+       <TextView
+           android:id="@+id/question_test_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="5dp"
+           android:fontFamily="sans-serif"
+           android:textColor="@color/text_color"
+           android:textSize="36dp"
+           tools:text="Test Name" />
+
+       <TextView
+           android:id="@+id/question_test_category"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@id/question_test_name"
+           android:layout_marginBottom="10dp"
+           android:fontFamily="sans-serif"
+           android:textColor="@color/text_color"
+           android:textSize="18dp"
+           tools:text="Category" />
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@id/question_test_category">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <RelativeLayout
+                   android:id="@+id/question_row_1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="5dp">
+
+                   <RelativeLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/question_number_layout"
+                       android:layout_centerVertical="true"
+                       android:layout_marginLeft="10dp">
+                       <TextView
+                           android:id="@+id/question_text_number_text_1"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:fontFamily="sans-serif"
+                           android:text="@string/question"
+                           android:textColor="@color/text_color"
+                           android:textSize="24dp" />
+                       <TextView
+                           android:id="@+id/question_current_number"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_toRightOf="@id/question_text_number_text_1"
+                           android:layout_centerVertical="true"
+                           android:fontFamily="sans-serif"
+                           android:layout_marginLeft="5dp"
+                           tools:text="10"
+                           android:textColor="@color/text_color"
+                           android:textSize="24dp" />
+                       <TextView
+                           android:id="@+id/question_text_number_text_2"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_toRightOf="@id/question_current_number"
+                           android:layout_centerVertical="true"
+                           android:layout_marginLeft="5dp"
+                           android:fontFamily="sans-serif"
+                           android:text="@string/of"
+                           android:textColor="@color/text_color"
+                           android:textSize="24dp" />
+                       <TextView
+                           android:id="@+id/question_total_number"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_toRightOf="@id/question_text_number_text_2"
+                           android:layout_centerVertical="true"
+                           android:layout_marginLeft="5dp"
+                           android:fontFamily="sans-serif"
+                           tools:text="100"
+                           android:textColor="@color/text_color"
+                           android:textSize="24dp" />
+                   </RelativeLayout>
+
+                   <RelativeLayout
+                       android:id="@+id/question_timer_layout"
+                       android:layout_width="60dp"
+                       android:layout_height="60dp"
+                       android:layout_alignParentRight="true"
+                       android:layout_centerVertical="true"
+                       android:layout_marginRight="10dp">
+
+                       <ProgressBar
+                           android:id="@+id/question_timer_progress"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:indeterminateTint="@color/white" />
+
+                       <TextView
+                           android:id="@+id/question_timer_count"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+                           android:layout_marginLeft="10dp"
+                           android:fontFamily="sans-serif"
+                           android:text="10s"
+                           android:textColor="@color/text_color"
+                           android:textSize="18dp" />
+                   </RelativeLayout>
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/question_question_container"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/question_row_1"
+                   android:layout_margin="20dp"
+                   android:background="@drawable/question_bg"
+                   android:padding="20dp">
+
+                   <View
+                       android:id="@+id/question_dot"
+                       android:layout_width="10dp"
+                       android:layout_height="10dp"
+                       android:layout_marginTop="7dp"
+                       android:background="@drawable/circle_green" />
+
+                   <TextView
+                       android:id="@+id/question_question_text"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10dp"
+                       android:fontFamily="sans-serif"
+                       android:layout_marginRight="20dp"
+                       android:layout_toRightOf="@id/question_dot"
+                       android:textColor="@color/black"
+                       android:textSize="18dp"
+                       tools:text="What is your name?" />
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/question_options_container"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/question_question_container"
+                   android:layout_margin="20dp"
+                   android:background="@drawable/question_bg"
+                   android:padding="10dp">
+
+                   <RadioGroup
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="10dp"
+                       android:id="@+id/radio_group_container">
+                       <RadioButton
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:padding="15dp"
+                           android:fontFamily="sans-serif"
+                           android:text="Option 1"
+                           android:textSize="18dp"
+                           android:id="@+id/option_1_radio"/>
+
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="1dp"
+                           android:id="@+id/option_line_1"
+                           android:layout_marginRight="20dp"
+                           android:layout_marginLeft="20dp"
+                           android:layout_below="@id/option_1_radio"
+                           android:background="@color/line_color"/>
+
+                       <RadioButton
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:text="Option 2"
+                           android:textSize="18dp"
+                           android:padding="15dp"
+                           android:fontFamily="sans-serif"
+                           android:id="@+id/option_2_radio"/>
+
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="1dp"
+                           android:id="@+id/option_line_2"
+                           android:layout_marginRight="20dp"
+                           android:layout_marginLeft="20dp"
+                           android:layout_below="@id/option_2_radio"
+                           android:background="@color/line_color"/>
+
+                       <RadioButton
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:padding="15dp"
+                           android:text="Option 3"
+                           android:fontFamily="sans-serif"
+                           android:textSize="18dp"
+                           android:id="@+id/option_3_radio"/>
+
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="1dp"
+                           android:id="@+id/option_line_3"
+                           android:layout_marginRight="20dp"
+                           android:layout_marginLeft="20dp"
+                           android:layout_below="@id/option_3_radio"
+                           android:background="@color/line_color"/>
+
+                       <RadioButton
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:padding="15dp"
+                           android:fontFamily="sans-serif"
+                           android:textSize="18dp"
+                           android:text="Option 4"
+                           android:id="@+id/option_4_radio"/>
+
+                   </RadioGroup>
+
+
+               </RelativeLayout>
+
+               <Button
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/question_next_button"
+                   android:text="@string/submit"
+                   android:layout_below="@id/question_options_container"
+                   android:background="@drawable/button_bg"
+                   android:layout_margin="30dp"
+                   android:fontFamily="sans-serif"
+                   android:textColor="@color/white"/>
+
+           </RelativeLayout>
+       </ScrollView>
+
+   </RelativeLayout>
+
+<!--    Question Container Ends here-->
+
+<!--    Score container Starts here-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/question_score_layout_container">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/question_score_container"
+            android:layout_centerInParent="true"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/question_score_top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/text_color"
+                android:textSize="36dp"
+                android:text="@string/your_score" />
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:id="@+id/question_score_result_container"
+                android:layout_below="@id/question_score_top_text">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/question_score_congrats_anim"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    app:lottie_rawRes="@raw/check_orange"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/question_score_result"
+                    android:padding="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/question_score_congrats_anim"
+                    tools:text="80"
+                    android:textColor="@color/white"
+                    android:textSize="48dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/question_score_result_container"
+                android:text="@string/congratulations"
+                android:textColor="@color/white"
+                android:layout_marginTop="50dp"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+<!--    Score Container Ends here-->
+</RelativeLayout>

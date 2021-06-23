@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AdminChildren">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin_children_top_container">
+        <TextView
+            android:id="@+id/admin_children_top_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/children"
+            android:textColor="@color/text_color"
+            android:textSize="36dp" />
+
+        <Spinner
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:id="@+id/admin_children_category_spinner"
+            android:layout_toRightOf="@id/admin_children_top_name"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/category"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/admin_children_search_container"
+        android:layout_below="@id/admin_children_top_container"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/search_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/admin_children_search_input"
+            android:hint="@string/search_here"
+            android:maxLength="30"
+            android:textColor="@color/black"
+            android:background="@drawable/input_bg"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true">
+            <requestFocus/>
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/admin_children_recycler_layout"
+        android:layout_below="@id/admin_children_search_container"
+        android:layout_margin="16dp"
+        android:paddingBottom="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/admin_children_recycler"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/admin_children_empty_anim"
+            android:layout_centerInParent="true"
+            app:lottie_rawRes="@raw/empty_box"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/admin_children_progress"
+            android:layout_centerInParent="true"
+            app:lottie_rawRes="@raw/spinning_circle"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

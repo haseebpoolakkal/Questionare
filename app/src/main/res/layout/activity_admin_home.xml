@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AdminHome">
+
+    <TextView
+        android:id="@+id/admin_home_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/app_name"
+        android:textColor="@color/text_color"
+        android:textSize="36dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/admin_home_app_name"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/admin_home_add_test_button"
+                android:layout_width="170dp"
+                android:layout_height="270dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_primary_bg"
+                    android:alpha="0.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/add_test"
+                    android:textColor="@color/text_color"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_home_children_button"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_primary_bg"
+                    android:alpha="0.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/children"
+                    android:textColor="@color/text_color"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_home_add_child_button"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_below="@id/admin_home_add_test_button"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_primary_bg"
+                    android:alpha="0.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/add_child"
+                    android:textColor="@color/text_color"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_home_logout_button"
+                android:layout_width="170dp"
+                android:layout_height="270dp"
+                android:layout_below="@id/admin_home_add_child_button"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_primary_bg"
+                    android:alpha="0.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/logout"
+                    android:textColor="@color/text_color"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_home_result_button"
+                android:layout_width="170dp"
+                android:layout_height="270dp"
+                android:layout_below="@id/admin_home_children_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_primary_bg"
+                    android:alpha="0.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/results"
+                    android:textColor="@color/text_color"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_home_question_button"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_below="@id/admin_home_result_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_primary_bg"
+                    android:alpha="0.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/question"
+                    android:textColor="@color/text_color"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_home_privacy_button"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_below="@id/admin_home_logout_button"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_primary_bg"
+                    android:alpha="0.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/privacy"
+                    android:textColor="@color/text_color"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_home_about_button"
+                android:layout_width="170dp"
+                android:layout_height="270dp"
+                android:layout_below="@id/admin_home_question_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color_primary_bg"
+                    android:alpha="0.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/about"
+                    android:textColor="@color/text_color"
+                    android:textSize="24dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
